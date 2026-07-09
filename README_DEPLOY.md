@@ -1,22 +1,16 @@
-# Yu Rowan Portfolio Site v4 Media
+# Rowan Yu Portfolio Site v11 - Case Study Fixed
 
-This version includes:
-- Big X Reality official website link
-- HTC VIVE OpenXR Unreal Plugin download link
-- Local BXR promotional video embedded with HTML5 video
-- BXR image gallery for selected VR/XR simulation projects
+Changes:
+- Removed confusing self-referencing Portfolio link from the hero.
+- Replaced it with View Case Studies.
+- Rewrote About to introduce work experience directly.
+- Grouped Big X Reality case studies together before HTC VIVE R&D.
+- Added NPC behavior design/implementation and Unreal Insights profiling to Marine Corps case study.
+- Changed case-study and gallery images to object-fit: contain to avoid poor cropping.
 
-## Deployment
+Deploy by uploading index.html, style.css, README_DEPLOY.md, and assets/ to the root of the GitHub Pages repository.
 
-1. Upload all files in this folder to GitHub.
-2. Keep the `assets/` folder structure unchanged.
-3. Enable GitHub Pages from the repository settings.
-4. Open the published Pages URL and verify:
-   - Images load correctly
-   - Video playback works
-   - External links open in a new tab
 
-## Confidentiality
+## Resume PDF
 
-Only publish these media assets if they are approved for public use.
-Project descriptions are sanitized and intentionally avoid internal architecture, customer-specific data and non-public implementation details.
+The resume PDF is included at `assets/Rowan_Yu_Google_ATS_Resume_EN.pdf`. Keep this filename unchanged so the website download link works.
