@@ -4,7 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Rowan Yu - Unreal Engine / XR Systems Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- v35: hero location (Taipei, Taiwan), About language line, Production Version Control highlight card added -->
+  <style>
+*{box-sizing:border-box}
+:root{--bg:#fff;--text:#111827;--muted:#4b5563;--soft:#f5f7fb;--line:#e5e7eb;--blue:#1f4e79;--blue2:#0f2f4d;--accent:#dbeafe}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Noto Sans TC",sans-serif;line-height:1.65}
+.site{max-width:1120px;margin:0 auto;padding:32px 22px 42px}
+.hero{padding:68px 0 34px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--blue);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+h1{font-size:52px;line-height:1.05;margin:0 0 14px}
+h2{font-size:28px;color:var(--blue);margin:0 0 10px}
+h3{font-size:22px;margin:0 0 10px}
+h4{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue2);margin:18px 0 7px}
+p{margin:0 0 14px}.tagline{font-size:20px;color:var(--muted);max-width:900px}
+.hero-actions{margin-top:18px}.hero-loc{display:inline-block;margin:6px 18px 6px 0;color:var(--muted);font-weight:700}.hero-actions a,.linkcard,.logo-card a{color:var(--blue);text-decoration:none;font-weight:700}
+.hero-actions a{display:inline-block;margin:6px 18px 6px 0}.hero-actions a:hover,.linkcard:hover,.logo-card a:hover{text-decoration:underline}
+.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:38px}
+.nav a{display:inline-block;color:var(--blue2);text-decoration:none;font-weight:700;margin-right:20px;font-size:14px}.nav a:hover{text-decoration:underline}
+.section{margin:0 0 58px}.section-title{margin-bottom:18px}.section-title p,.intro p,.company-heading p{color:var(--muted);max-width:920px}
+.company-block{margin:26px 0 52px}.company-heading{border-left:5px solid var(--blue);padding-left:16px;margin-bottom:18px}
+.case-study{border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:minmax(260px,38%) 1fr;margin:22px 0;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.05)}
+.case-study.reverse{grid-template-columns:1fr minmax(260px,38%)}.case-study.reverse .case-media{order:2}
+.case-media{background:#eef2f7;min-height:310px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.case-media img{width:100%;height:calc(100% - 5cm);min-height:230px;object-fit:cover;object-position:50% 50%;display:block}
+.case-media img.pos-humvee{object-position:calc(50% + 1.3cm) 50%}
+.case-media img.pos-mortar{object-position:calc(50% + 0.7cm) 50%}
+.case-media img.pos-speedboat{object-position:calc(50% + 1.3cm) 50%}
+.case-media img.pos-pose{object-position:calc(50% + 1.8cm) 50%}
+.logo-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px}
+.logo-title{font-size:36px;font-weight:800;color:var(--blue2);margin-bottom:8px}.logo-subtitle{color:var(--muted);margin-bottom:18px}
+.case-content{padding:26px 28px}.case-label{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);background:var(--accent);border-radius:999px;padding:5px 10px;margin-bottom:12px;font-weight:800}
+.summary{font-size:17px;color:#374151}.case-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:22px;margin-top:8px}
+ul{margin:6px 0 0;padding-left:20px}li{margin:4px 0}.impact-list li{font-weight:500}
+.highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.highlight{border:1px solid var(--line);background:var(--soft);border-radius:16px;padding:18px}.highlight h3{font-size:18px;color:var(--blue2)}.highlight p{color:var(--muted)}
+.media-card{border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--soft);margin-bottom:18px}video{width:100%;max-height:620px;background:#000;border-radius:12px;display:block}.media-card p{color:var(--muted);font-size:14px;margin-top:10px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}figure{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}figure img{width:100%;height:190px;object-fit:cover;object-position:center center;background:#eef2f7;display:block}figcaption{font-size:14px;color:var(--muted);padding:11px 13px}
+.linkcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.linkcard{display:block;border:1px solid var(--line);border-radius:16px;background:var(--soft);padding:18px;color:var(--text)}.linkcard span{display:block;font-weight:800}.linkcard small{display:block;color:var(--muted);margin-top:5px}
+.note{border-left:4px solid var(--blue);background:var(--soft);padding:16px;border-radius:10px;color:var(--muted)}
+footer{border-top:1px solid var(--line);color:var(--muted);padding-top:18px;display:flex;justify-content:space-between;gap:16px}
+
+
+
+
+.recommendation-carousel{position:relative;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;gap:14px}
+.carousel-window{overflow:hidden;border-radius:20px}
+.carousel-track{display:flex;transition:transform .55s cubic-bezier(.22,1,.36,1);will-change:transform}
+.recommendation-card{min-width:100%;min-height:260px;border:1px solid var(--line);background:linear-gradient(180deg,#ffffff 0%,var(--soft) 100%);border-radius:20px;padding:28px 30px;box-shadow:0 10px 28px rgba(15,23,42,.04)}
+.linkedin-badge{display:inline-block;background:#e8f1fb;color:#0a66c2;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+.quote{font-size:19px;color:#1f2937;margin-bottom:20px}
+.recommendation-meta{border-top:1px solid var(--line);padding-top:12px;color:var(--muted)}
+.recommendation-meta strong{display:block;color:var(--blue2)}
+.recommendation-meta span{display:block;font-size:14px;margin-top:3px}
+.carousel-btn{width:44px;height:44px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--blue2);font-size:32px;line-height:1;cursor:pointer;box-shadow:0 8px 20px rgba(15,23,42,.06);display:flex;align-items:center;justify-content:center}
+.carousel-btn:hover{background:var(--soft)}
+.carousel-dots{grid-column:1 / -1;display:flex;justify-content:center;gap:8px;margin-top:12px}
+.carousel-dot{width:9px;height:9px;border-radius:999px;border:0;background:#cbd5e1;cursor:pointer;padding:0}
+.carousel-dot.active{background:var(--blue)}
+
+
+.recommendation-link{text-align:center;margin-top:16px}
+.recommendation-link a{color:var(--blue);font-weight:800;text-decoration:none}
+.recommendation-link a:hover{text-decoration:underline}
+
+@media(max-width:820px){.case-media{min-height:260px}.case-media img{height:100%;min-height:0;width:100%;object-fit:contain;object-position:50% 50%}.recommendation-carousel{grid-template-columns:1fr}.carousel-btn{position:absolute;z-index:2;background:rgba(255,255,255,.92)}.carousel-btn.prev{left:8px}.carousel-btn.next{right:8px}.recommendation-card{padding:24px 22px}.quote{font-size:17px}.site{padding:24px 16px}h1{font-size:42px}.tagline{font-size:18px}.nav{position:static}.case-study,.case-study.reverse{display:block}.case-study.reverse .case-media{order:0}.case-media{min-height:220px}.case-grid{grid-template-columns:1fr}footer{display:block}}
+
+  </style>
 </head>
 <body>
 <div class="site">
@@ -13,14 +78,16 @@
   <h1>Rowan Yu</h1>
   <p class="tagline">Senior Unreal Engine Software Engineer focused on VR/XR simulation systems, multiplayer workflows, developer-facing OpenXR tooling, runtime optimization and hardware integration.</p>
   <div class="hero-actions">
+    <span class="hero-loc">Taipei, Taiwan</span>
     <a href="mailto:rowan.yu27@gmail.com">rowan.yu27@gmail.com</a>
     <a href="https://www.linkedin.com/in/rowan-yu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="assets/Rowan_Yu_Google_ATS_Resume_EN.pdf" target="_blank" rel="noopener noreferrer">Download Resume PDF</a>
+    <a href="assets/Rowan_Yu_Google_ATS_Resume_EN.pdf" target="_blank" rel="noopener noreferrer">Resume PDF</a>
     <a href="#case-studies">View Case Studies</a>
   </div>
 </header>
 
 <nav class="nav">
+  <a href="#recommendations">Recommendations</a>
   <a href="#bigx">Big X Reality</a>
   <a href="#htc">HTC VIVE R&amp;D</a>
   <a href="#technical-highlights">Technical Highlights</a>
@@ -33,6 +100,70 @@
   <h2>About</h2>
   <p>I build real-time VR/XR training and simulation systems with Unreal Engine and C++, combining multiplayer gameplay, hardware integration, performance profiling, runtime tooling and developer-facing workflows.</p>
   <p>My recent work at Big X Reality focuses on large-scale VR training simulators for mixed PC and PC-to-VR streamed environments. Previously at HTC VIVE R&amp;D, I worked on ViveOpenXR Unreal plugins, samples and tutorials that helped developers integrate OpenXR features into Unreal projects.</p>
+  <p>I work in both Mandarin Chinese (native) and English, collaborating across engineering, art, design and hardware teams in both languages.</p>
+</section>
+
+
+
+<section id="recommendations" class="section recommendations">
+  <div class="section-title">
+    <h2>LinkedIn Recommendations</h2>
+    <p>Selected excerpts from LinkedIn recommendations by former managers and cross-functional teammates.</p>
+  </div>
+
+  <div class="recommendation-carousel" aria-label="LinkedIn Recommendations carousel">
+    <button class="carousel-btn prev" type="button" aria-label="Previous recommendation">‹</button>
+
+    <div class="carousel-window">
+      <div class="carousel-track">
+
+        <article class="recommendation-card">
+          <div class="linkedin-badge">LinkedIn Recommendation</div>
+          <p class="quote">“I managed Rowan at Artlord Studio, where she worked as an R&amp;D Engineer on our VR projects. What stood out to me was how reliable she was. She took ownership of problems on her own, without needing to be chased, and thought clearly when working through technical issues.”</p>
+          <div class="recommendation-meta">
+            <strong>Chris Chen</strong>
+            <span>Unity / Unreal Game Developer · MoonShine Studio</span>
+            <span>Former direct manager at Artlord Studio</span>
+          </div>
+        </article>
+        <article class="recommendation-card">
+          <div class="linkedin-badge">LinkedIn Recommendation</div>
+          <p class="quote">“Rowan showed strong and mature professional ability while working across Unreal Engine, art assets, interaction design and VR performance. What impressed me most was her ability to build clear communication between engineering and art, helping the team find a balance between visual quality and runtime performance.”</p>
+          <div class="recommendation-meta">
+            <strong>Leo Li</strong>
+            <span>Senior 3D Artist Leader · HTC</span>
+            <span>Former teammate on VR / interactive entertainment projects</span>
+          </div>
+        </article>
+        <article class="recommendation-card">
+          <div class="linkedin-badge">LinkedIn Recommendation</div>
+          <p class="quote">“Rowan possesses an elite technical foundation in C++, Blueprints and custom Unreal plugin production. She optimized complex multiplayer networking and large-scale VR motion platform simulations, and independently designed, iterated and implemented the AI enemy and alliance system from scratch using Unreal Engine Behavior Trees and advanced AI architecture.”</p>
+          <div class="recommendation-meta">
+            <strong>Yu Shu Hsu</strong>
+            <span>AR Engineer · Snap, Inc.</span>
+            <span>Former teammate on large-scale defense VR projects</span>
+          </div>
+        </article>
+        <article class="recommendation-card">
+          <div class="linkedin-badge">LinkedIn Recommendation</div>
+          <p class="quote">“I worked with Rowan on a military XR training project where she was responsible for 21 NPC behavior trees across 11 training modes. Whenever we started a new scenario, she quickly sketched clear NPC logic frameworks that helped us move forward with the design. Working with her is easy; she listens to design needs and is always open to exploring better ways to do things.”</p>
+          <div class="recommendation-meta">
+            <strong>Yu-Ting Chen</strong>
+            <span>Senior Product Designer · Big X Reality</span>
+            <span>Former teammate on military XR training projects</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <button class="carousel-btn next" type="button" aria-label="Next recommendation">›</button>
+
+    <div class="carousel-dots" aria-label="Recommendation carousel pagination"></div>
+  </div>
+
+  <div class="recommendation-link">
+    <a href="https://www.linkedin.com/in/rowan-yu" target="_blank" rel="noopener noreferrer">View full recommendations on LinkedIn</a>
+  </div>
 </section>
 
 <section id="case-studies" class="section">
@@ -47,45 +178,143 @@
       <p>Senior Unreal Engineer · VR/XR training simulation · multiplayer systems · hardware integration · runtime tooling</p>
     </div>
 
-    <article class="case-study">
-      <div class="case-media contained"><img src="assets/Humvee.jpeg" alt="VR vehicle simulator with multiple users wearing VR headsets."></div>
+<article class="case-study">
+  <div class="case-media contained"><img class="pos-humvee" src="assets/Humvee.jpeg" alt="VR vehicle simulator with multiple users wearing VR headsets."></div>
+  <div class="case-content">
+    <div class="case-label">Big X Reality · Multiplayer VR / PC-VR</div>
+    <h3>Marine Corps VR Training Simulator</h3>
+    <p class="summary">A large-scale VR training simulation platform combining Windows PC clients, PC-to-VR streamed clients, NPC systems, multi-user training flows and backend-facing runtime data requirements.</p>
+    <div class="case-grid">
+      <div>
+        <h4>My Role</h4>
+        <p>Senior Unreal Engineer responsible for core Unreal-side simulation systems, NPC behavior design and implementation, multiplayer validation support and performance/network bottleneck investigation.</p>
+      </div>
+      <div>
+        <h4>Technical Scope</h4>
+        <ul>
+          <li>Mixed desktop and PC-to-VR streamed training workflows</li>
+          <li>Multiplayer simulation support for up to 30 connected computers</li>
+          <li>NPC behavior design and implementation for training scenarios</li>
+          <li>Performance and network bottleneck investigation with Unreal Insights</li>
+          <li>Scenario-level coordination with designers, artists, PMs and backend partners</li>
+        </ul>
+      </div>
+    </div>
+    <h4>Engineering Challenge</h4>
+    <p>The project required many PC and PC-to-VR clients, NPC logic and training scenario states to remain stable in packaged multiplayer builds. I used Unreal Insights to trace performance and network transmission bottlenecks, then adjusted Unreal-side systems and scenario logic to improve stability and iteration quality.</p>
+    <h4>Impact</h4>
+    <ul class="impact-list">
+      <li>Supported large-scale multiplayer validation with up to 30 connected computers.</li>
+      <li>Designed and implemented NPC behavior systems for training scenarios.</li>
+      <li>Used profiling evidence from Unreal Insights to identify and fix performance and networking bottlenecks.</li>
+      <li>Helped translate scenario requirements into Unreal-side runtime behavior that could be validated in packaged builds.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="case-study reverse">
+      <div class="case-media contained"><img class="pos-pose" src="assets/Pose_HoldingGunAndStandInfrontOfVehicles.jpeg" alt="Engineer holding a weapon peripheral in front of VR vehicle simulators."></div>
       <div class="case-content">
-        <div class="case-label">Big X Reality · Multiplayer VR / PC-VR</div>
-        <h3>Marine Corps VR Training Simulator</h3>
-        <p class="summary">A large-scale VR training simulation platform combining Windows PC clients, PC-to-VR streamed clients, motion platforms, external tracking systems, weapon peripherals, NPC systems and backend data workflows.</p>
+        <div class="case-label">Big X Reality · Hardware / Tracking Integration</div>
+        <h3>Weapon Hardware Signals & Tracking Coordinate Integration</h3>
+        <p class="summary">Unreal-side integration work for weapon hardware signals and external tracking systems, connecting Arduino, Antilatency, OptiTrack and headset tracking data into stable VR training interactions.</p>
         <div class="case-grid">
           <div>
             <h4>My Role</h4>
-            <p>Senior Unreal Engineer responsible for Unreal-side systems, NPC behavior design and implementation, reusable tools, data collection workflows, runtime tuning support, multiplayer test workflows and hardware-integration support.</p>
+            <p>Integrated weapon input signals and external tracking data into Unreal gameplay systems, then debugged coordinate-space mismatches across hardware tracking sources and VR headset tracking spaces during packaged-build validation.</p>
           </div>
           <div>
             <h4>Technical Scope</h4>
             <ul>
-              <li>Mixed desktop and PC-to-VR streamed training workflows</li>
-              <li>Multiplayer simulation support for up to 30 connected computers</li>
-              <li>NPC behavior design and implementation for training scenarios</li>
-              <li>Performance and network bottleneck investigation with Unreal Insights</li>
-              <li>Motion platform / I/O signal integration through shared-memory workflows</li>
-              <li>Antilatency, OptiTrack and weapon peripheral integration support</li>
-              <li>HTTP / Socket.IO data collection and backend handoff workflows</li>
+              <li>Arduino-based weapon hardware signal input and Unreal gameplay event mapping</li>
+              <li>Antilatency integration for weapon/peripheral tracking workflows</li>
+              <li>OptiTrack integration for external tracking data</li>
+              <li>Coordinate-space alignment between external tracking systems and headset / VR runtime tracking spaces</li>
+              <li>Packaged-build validation with hardware, design and art teammates</li>
             </ul>
           </div>
         </div>
         <h4>Engineering Challenge</h4>
-        <p>The project required multiple user roles, VR clients, desktop clients, NPCs and hardware systems to be validated in packaged builds. I used Unreal Insights to trace performance and network transmission bottlenecks, then adjusted Unreal-side systems and workflows to improve stability and iteration quality.</p>
+        <p>Different tracking systems can use different origins, orientations, update timing and reference spaces. The integration work focused on making weapon signals and tracked objects behave consistently in Unreal even when OptiTrack, Antilatency and headset tracking were not naturally aligned to the same coordinate space.</p>
         <h4>Impact</h4>
         <ul class="impact-list">
-          <li>Supported large-scale multiplayer validation with up to 30 connected computers.</li>
-          <li>Built NPC behavior systems that could be reused across training scenarios.</li>
-          <li>Used profiling evidence from Unreal Insights to identify and fix performance and networking bottlenecks.</li>
-          <li>Reduced repetitive setup by creating packaged-build launch workflows for server and selected client types.</li>
-          <li>Enabled non-Unreal teammates to tune packaged EXE parameters through external Excel/config files.</li>
+          <li>Centralized weapon signal and tracking integration logic instead of scattering hardware-specific handling across scenario code.</li>
+          <li>Improved reliability of hardware-driven VR interactions during packaged-build testing.</li>
+          <li>Reduced debugging ambiguity by separating signal input, tracking data and coordinate conversion concerns.</li>
+          <li>Helped cross-functional teammates validate physical device behavior against the in-game representation.</li>
         </ul>
       </div>
     </article>
 
-    <article class="case-study reverse">
-      <div class="case-media contained"><img src="assets/Mortar.jpeg" alt="Two VR users interacting with a mortar training simulator."></div>
+<article class="case-study">
+  <div class="case-media contained"><img class="pos-speedboat" src="assets/SpeedBoat_Simulating.jpeg" alt="VR speedboat simulator platform in motion."></div>
+  <div class="case-content">
+    <div class="case-label">Big X Reality · Tooling / Performance</div>
+    <h3>Reusable Unreal Tools & Runtime Tuning</h3>
+    <p class="summary">Reusable Unreal tools and workflows designed to reduce repeated setup work, make packaged builds easier to validate and allow non-Unreal teammates to participate in runtime tuning and data collection workflows.</p>
+    <div class="case-grid">
+      <div>
+        <h4>My Role</h4>
+        <p>Designed and implemented reusable Unreal components/plugins and packaged-build workflows for NPC optimization, content generation, telemetry abstraction, runtime configuration and multiplayer validation.</p>
+      </div>
+      <div>
+        <h4>Technical Scope</h4>
+        <ul>
+          <li>NPC performance optimization component plugin</li>
+          <li>Project-wide generation tools for NPCs and scene objects</li>
+          <li>External Excel/config runtime tuning for packaged EXEs</li>
+          <li>.bat launch tools for server and selected client workflows</li>
+          <li>Telemetry capture, encryption, timestamp conversion and HTTP/Socket.IO routing</li>
+        </ul>
+      </div>
+    </div>
+    <h4>Engineering Challenge</h4>
+    <p>The team needed reusable workflows that worked in packaged builds, not only inside the Unreal Editor. Tools had to reduce repeated manual steps while staying usable by designers, artists, PMs and customer-facing validation sessions.</p>
+    <h4>Impact</h4>
+    <ul class="impact-list">
+      <li>Reduced manual multiplayer setup by automating server/client launch workflows.</li>
+      <li>Enabled non-Unreal teammates to tune packaged EXE parameters through external Excel/config files.</li>
+      <li>Allowed teammates to attach telemetry capture without rewriting transport or data-format handling.</li>
+      <li>Improved reuse by moving shared workflows into project-wide tools instead of feature-specific one-off logic.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="case-study reverse">
+  <div class="case-media logo-card">
+    <div class="logo-title">Unreal Android</div>
+    <div class="logo-subtitle">Self-directed Validation · VIVE Focus 3 · APK / ADB / Logcat</div>
+  </div>
+  <div class="case-content">
+    <div class="case-label">Personal Validation · Android Ramp-up</div>
+    <h3>Unreal Android APK Validation on VIVE Focus 3</h3>
+    <p class="summary">A self-directed validation exercise to connect my Unreal PC/VR production background with Android build, deploy and diagnostic workflows. This was not a Big X Reality product and is presented as focused Android ramp-up work.</p>
+    <div class="case-grid">
+      <div>
+        <h4>What I Validated</h4>
+        <ul>
+          <li>Unreal Android packaging workflow</li>
+          <li>APK deployment to VIVE Focus 3 through ADB</li>
+          <li>Runtime log inspection through Logcat</li>
+          <li>Basic Android SDK / NDK build-deploy troubleshooting flow</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Why It Matters</h4>
+        <p>The exercise gives me a practical Android baseline that can connect with my existing Unreal debugging, profiling and VR runtime experience when discussing Android game development workflows.</p>
+      </div>
+    </div>
+    <h4>Impact</h4>
+    <ul class="impact-list">
+      <li>Established a hands-on Android build/deploy/debug baseline for Unreal projects.</li>
+      <li>Created a concrete bridge between Unreal production experience and Android game workflow ramp-up.</li>
+      <li>Kept the scope accurate: validation experience, not shipped Android production experience.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="case-study">
+      <div class="case-media contained"><img class="pos-mortar" src="assets/Mortar.jpeg" alt="Two VR users interacting with a mortar training simulator."></div>
       <div class="case-content">
         <div class="case-label">Big X Reality · Two-person VR Training</div>
         <h3>Mortar Training Simulator</h3>
@@ -99,34 +328,6 @@
       </div>
     </article>
 
-    <article class="case-study">
-      <div class="case-media contained"><img src="assets/SpeedBoat_Simulating.jpeg" alt="VR speedboat simulator platform in motion."></div>
-      <div class="case-content">
-        <div class="case-label">Big X Reality · Tooling / Performance</div>
-        <h3>Reusable Unreal Tools & Runtime Tuning</h3>
-        <p class="summary">A set of reusable tools and plugins designed to make large VR training projects easier to test, tune and maintain across packaged builds, NPC systems and data collection workflows.</p>
-        <div class="case-grid">
-          <div><h4>My Role</h4><p>Designed and implemented reusable Unreal components/plugins for NPC optimization, content generation, data collection abstraction and runtime configuration workflows.</p></div>
-          <div><h4>Technical Scope</h4><ul><li>NPC behavior and performance optimization component plugin</li><li>Project-wide generation tools for NPCs and scene objects</li><li>External Excel/config runtime tuning for packaged EXEs</li><li>.bat launch tools for server and selected client workflows</li><li>Telemetry capture, encryption, timestamp conversion and HTTP/Socket.IO routing</li></ul></div>
-        </div>
-        <h4>Engineering Challenge</h4><p>The team needed faster iteration for packaged builds and reusable workflows that non-Unreal teammates could participate in. Tools had to remain practical for real validation sessions, not only editor-based development.</p>
-        <h4>Impact</h4><ul class="impact-list"><li>Enabled repeated use across NPC types, generated objects and future project scenarios.</li><li>Allowed teammates to attach telemetry capture without rewriting transport or data-format handling.</li><li>Reduced manual multiplayer setup by automating server/client launch workflows.</li><li>Enabled faster customer validation feedback loops by allowing runtime tuning without rebuilds.</li></ul>
-      </div>
-    </article>
-
-    <article class="case-study reverse">
-      <div class="case-media contained"><img src="assets/Gun.jpeg" alt="VR user in a prone shooting training simulation."></div>
-      <div class="case-content">
-        <div class="case-label">Big X Reality · Android Ramp-up</div>
-        <h3>Unreal Android APK Validation on VIVE Focus 3</h3>
-        <p class="summary">A focused validation exercise to close the gap between my PC/VR production background and Android game workflows. The goal was not to claim Android production experience, but to build hands-on familiarity with Unreal Android packaging.</p>
-        <div class="case-grid">
-          <div><h4>What I Validated</h4><ul><li>Unreal Android packaging workflow</li><li>APK deployment to VIVE Focus 3 through ADB</li><li>Runtime log inspection through Logcat</li><li>Basic Android SDK/NDK build/deploy workflow</li></ul></div>
-          <div><h4>Why It Matters</h4><p>This helps me connect my existing Unreal performance and debugging background with Android-specific game build, deploy and diagnostic workflows.</p></div>
-        </div>
-        <h4>Impact</h4><ul class="impact-list"><li>Established a practical Android build/deploy/debug baseline for Unreal projects.</li><li>Created a concrete discussion point for Android game profiling ramp-up.</li><li>Kept the claim scoped and accurate: validation experience, not shipped Android production experience.</li></ul>
-      </div>
-    </article>
   </div>
 
   <div id="htc" class="company-block">
@@ -138,18 +339,18 @@
       <div class="case-media logo-card">
         <div class="logo-title">ViveOpenXR</div>
         <div class="logo-subtitle">Unreal Plugin · Samples · Tutorials</div>
-        <a href="https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/?_gl=1*j40tb3*_up*MQ..*_ga*MTI4NDc5MTQ5Ny4xNzgzNTM2OTU4*_ga_68NRVQF2CG*czE3ODM1MzY5NDIkbzEkZzAkdDE3ODM1MzY5NDIkajYwJGwwJGg1NDYyMDc3MzE." target="_blank" rel="noopener noreferrer">HTC Developer Download</a>
+        <a href="https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/" target="_blank" rel="noopener noreferrer">HTC Developer Download</a>
       </div>
       <div class="case-content">
         <div class="case-label">HTC VIVE R&amp;D · Developer Enablement</div>
         <h3>ViveOpenXR Unreal Plugin, Samples & Tutorials</h3>
         <p class="summary">Developer-facing Unreal plugin and sample work for HTC-supported OpenXR features, designed to help Unreal developers adopt XR capabilities faster through working examples and technical tutorials.</p>
         <div class="case-grid">
-          <div><h4>My Role</h4><p>Developed ViveOpenXR plugin features for UE4.27 and UE5.0, built sample projects, authored Unreal-focused tutorials and implemented Live Link workflows for OpenXR Facial Tracking data.</p></div>
+          <div><h4>My Role</h4><p>Developed ViveOpenXR plugin features for UE4.27 and UE5.0, built sample projects, authored Unreal-focused tutorials and implemented Live Link workflows for OpenXR Facial Tracking data. Also supported external Unreal developers directly: questions and feature requests reported through HTC's developer community were assigned to me, and I debugged their integration issues, answered them and shipped plugin/sample updates based on that feedback.</p></div>
           <div><h4>Technical Scope</h4><ul><li>OpenXR Scene Understanding</li><li>OpenXR Facial Tracking with Unreal Live Link</li><li>Avatar / MetaHuman facial expression samples</li><li>OpenXR Hand Tracking and Eye Gaze samples</li><li>VIVE Cosmos controller mapping support</li></ul></div>
         </div>
         <h4>Engineering Challenge</h4><p>SDK features are only useful when developers can understand how to integrate them into real engine workflows. The work required turning platform capabilities into Unreal-friendly plugin behavior, sample code and tutorials.</p>
-        <h4>Impact</h4><ul class="impact-list"><li>Reduced integration friction for Unreal developers adopting HTC-supported OpenXR features.</li><li>Provided developer-facing samples for Facial Tracking, Scene Understanding, Hand Tracking and Eye Gaze.</li><li>Supported SDK adoption through tutorials that explained practical Unreal integration workflows.</li><li>Submitted UE5.0 ViveOpenXR plugin work as a pull request to EpicGames/UnrealEngine.</li></ul>
+        <h4>Impact</h4><ul class="impact-list"><li>Reduced integration friction for Unreal developers adopting HTC-supported OpenXR features.</li><li>Provided developer-facing samples for Facial Tracking, Scene Understanding, Hand Tracking and Eye Gaze.</li><li>Supported SDK adoption through tutorials that explained practical Unreal integration workflows.</li><li>Closed the loop with the developer community: triaged developer-reported issues and feature requests, and shipped plugin/sample updates driven by that feedback.</li><li>Submitted UE5.0 ViveOpenXR plugin work as a pull request to EpicGames/UnrealEngine.</li></ul>
       </div>
     </article>
   </div>
@@ -162,6 +363,7 @@
     <div class="highlight"><h3>Packaged Build Tooling</h3><p>Created server/client launch and runtime tuning workflows for packaged builds, reducing dependence on the Unreal Editor during validation sessions.</p></div>
     <div class="highlight"><h3>Reusable Plugin Architecture</h3><p>Designed Unreal components and plugins with reuse in mind, including NPC optimization, data collection and project-wide generation workflows.</p></div>
     <div class="highlight"><h3>Cross-functional Debugging</h3><p>Collaborated with hardware engineers, artists, backend/database partners, PMs and designers to isolate issues across Unreal, hardware signals, data pipelines and packaged runtime behavior.</p></div>
+    <div class="highlight"><h3>Production Version Control &amp; Build Workflow</h3><p>Run Unreal production on Perforce-centered version control — a deliberate choice because Blueprints and other binary assets make merge conflicts costly — alongside Jenkins build pipelines and Git, and mentored teammates on setting up and operating these workflows.</p></div>
   </div>
 </section>
 
@@ -186,9 +388,9 @@
 <section id="links" class="section">
   <div class="section-title"><h2>External Links</h2></div>
   <div class="linkcards">
-    <a class="linkcard" href="assets/Rowan_Yu_Google_ATS_Resume_EN.pdf" target="_blank" rel="noopener noreferrer"><span>Download Resume PDF</span><small>ATS resume, PDF format</small></a>
+    <a class="linkcard" href="assets/Rowan_Yu_Google_ATS_Resume_EN.pdf" target="_blank" rel="noopener noreferrer"><span>Resume PDF</span><small>ATS resume, PDF format</small></a>
     <a class="linkcard" href="https://www.bigxreality.com/tw/home" target="_blank" rel="noopener noreferrer"><span>Big X Reality</span><small>Official Website</small></a>
-    <a class="linkcard" href="https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/?_gl=1*j40tb3*_up*MQ..*_ga*MTI4NDc5MTQ5Ny4xNzgzNTM2OTU4*_ga_68NRVQF2CG*czE3ODM1MzY5NDIkbzEkZzAkdDE3ODM1MzY5NDIkajYwJGwwJGg1NDYyMDc3MzE." target="_blank" rel="noopener noreferrer"><span>HTC VIVE OpenXR Unreal Plugin</span><small>Developer Download</small></a>
+    <a class="linkcard" href="https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/" target="_blank" rel="noopener noreferrer"><span>HTC VIVE OpenXR Unreal Plugin</span><small>Developer Download</small></a>
     <a class="linkcard" href="https://www.linkedin.com/in/rowan-yu" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><small>Professional Profile</small></a>
   </div>
 </section>
@@ -201,5 +403,55 @@
 
 <footer><div>© Rowan Yu</div><div>rowan.yu27@gmail.com</div></footer>
 </div>
+
+<script>
+(function(){
+  const carousel = document.querySelector('.recommendation-carousel');
+  if(!carousel) return;
+
+  const track = carousel.querySelector('.carousel-track');
+  const cards = Array.from(carousel.querySelectorAll('.recommendation-card'));
+  const prev = carousel.querySelector('.carousel-btn.prev');
+  const next = carousel.querySelector('.carousel-btn.next');
+  const dotsWrap = carousel.querySelector('.carousel-dots');
+  let index = 0;
+
+  cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.type = 'button';
+    dot.setAttribute('aria-label', 'Show recommendation ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsWrap.querySelectorAll('.carousel-dot'));
+
+  function update(){
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+  }
+
+  function goTo(i){
+    index = (i + cards.length) % cards.length;
+    update();
+  }
+
+  prev.addEventListener('click', () => goTo(index - 1));
+  next.addEventListener('click', () => goTo(index + 1));
+
+  let startX = null;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    if(startX === null) return;
+    const diff = e.changedTouches[0].clientX - startX;
+    if(Math.abs(diff) > 45) goTo(index + (diff < 0 ? 1 : -1));
+    startX = null;
+  });
+
+  update();
+})();
+</script>
+
 </body>
 </html>
