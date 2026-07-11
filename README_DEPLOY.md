@@ -93,3 +93,74 @@ After upload, wait 1-5 minutes and hard refresh the page with Ctrl + F5.
 
 - Changed Mortar Training Simulator from reversed layout to standard layout.
 - Mortar image now appears on the left side to match the current case-study visual sequence.
+
+## v36 Updates
+
+- Updated Unreal Android APK Validation on VIVE Focus 3 with latest validated results.
+- Clarified it is a self-directed Android ramp-up validation exercise, not a Big X Reality product.
+- Added UE 5.4.4, VIVE OpenXR Plugin 2.5.0, Android ASTC packaging, ADB install and Logcat diagnostics.
+- Added Vulkan-only Android baseline and required CVar / Device Profile overrides.
+- Added issues resolved: 2D-vs-VR recognition, Vulkan startup, OpenXR disablement, black/white screen, inverted image and stereo rendering.
+- Clarified controller input appears functional and hand tracking is not yet validated.
+
+## v37 Updates
+
+- Refined Android validation wording for portfolio/resume tone.
+- Removed over-emphasized negative phrasing around Big X Reality / shipped Android / Google Play.
+- Changed controller status to validated as functional.
+- Removed future-study profiling disclaimer from portfolio content.
+
+
+## v38 Updates
+
+- Added a standalone Personal Android Validation section separate from Big X Reality.
+- Focus 3 Android validation is presented as completed personal validation.
+- Added Google Pixel Android phone build/performance validation as a planned next track.
+- Updated embedded resume PDF to v14.
+
+## v39 Updates
+
+- Mortar Training Simulator uses reversed layout so the image appears on the right.
+- Google Pixel Android Phone Build & Performance Validation is placed directly below Unreal Android APK Validation on VIVE Focus 3.
+- The Android validation track is kept together because it is the closest portfolio evidence for Google Android / Play / Games.
+
+## v40 Updates
+
+- Fixed case-study grouping after v39.
+- Mortar Training Simulator is moved back under Big X Reality, below Reusable Unreal Tools & Runtime Tuning.
+- Personal Android Validation order is now:
+  1. Google Pixel Android Phone Build & Performance Validation
+  2. Unreal Android APK Validation on VIVE Focus 3
+- Mortar Training Simulator remains in reversed layout so the image appears on the right.
+
+## v41 Updates
+
+- Refined Personal Android Validation wording for ATS-style clarity.
+- Prioritized the Google Pixel planned validation card as the first Personal Android Validation case study.
+- Softened scope-boundary wording on the Pixel card while keeping the work accurately framed as planned validation.
+- Updated resume PDF asset to the v15 ATS resume.
+
+## v42 Updates
+
+- Added a new LinkedIn recommendation from Shuo Han Yeh as the first recommendation card.
+- Recommendation highlights HTC VR project collaboration, VR headset/tracker API work, Unreal integration, CPU/memory optimization, code quality, reliability, stability and teamwork.
+
+## v43 Updates
+
+- Updated Shuo Han Yeh's current company from Getac to Synopsys.
+
+## v44 Updates
+
+- Fixed Shuo Han Yeh recommendation card formatting to match the other LinkedIn recommendation cards.
+- Shortened the recommendation from a full multi-paragraph letter to a concise excerpt so the section no longer appears enlarged.
+- Kept Shuo Han Yeh as the first recommendation and kept company as Synopsys.
+
+## v45 Updates
+
+- Rebuilt Shuo Han Yeh's recommendation card to match Chris Chen's recommendation card format exactly:
+  - LinkedIn Recommendation badge
+  - quote paragraph with class="quote"
+  - recommendation-meta block
+  - strong name line
+  - title/company span
+  - relationship span
