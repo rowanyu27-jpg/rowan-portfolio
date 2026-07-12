@@ -109,7 +109,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding-top:18px;disp
   <p>I build real-time VR/XR training and simulation systems with Unreal Engine and C++, combining multiplayer gameplay, hardware integration, performance profiling, runtime tooling and developer-facing workflows.</p>
   <p>My recent work at Big X Reality focuses on large-scale VR training simulators for mixed PC and PC-to-VR streamed environments. Previously at HTC VIVE R&amp;D, I worked on ViveOpenXR Unreal plugins, samples and tutorials that helped developers integrate OpenXR features into Unreal projects.</p>
   <p>I work in both Mandarin Chinese (native) and English, collaborating across engineering, art, design and hardware teams in both languages.</p>
-  <p>In parallel, I maintain personal Android validation work that extends my Unreal PC/VR debugging experience into Focus 3 standalone OpenXR validation and a completed Google Pixel 6 phone build/deploy validation, with performance diagnostics as the next planned step.</p>
+  <p>In parallel, I maintain personal Android validation work that extends my Unreal PC/VR debugging experience into Focus 3 standalone OpenXR validation and a completed Google Pixel 6 phone build/deploy validation and an Android performance-profiling baseline (ADB, Perfetto, PerfettoSQL).</p>
 </section>
 
 
@@ -342,17 +342,17 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding-top:18px;disp
 <div id="personal-validation" class="company-block">
   <div class="company-heading">
     <h2>Personal Android Validation</h2>
-    <p>Self-directed Android ramp-up work that extends Unreal PC/VR debugging experience into Android build, deployment, runtime diagnostics, OpenXR validation and Android phone build/deploy validation on Google Pixel 6.</p>
+    <p>Self-directed Android ramp-up work that extends Unreal PC/VR debugging experience into Android build, deployment, runtime diagnostics, OpenXR validation, Android phone build/deploy validation and a Perfetto profiling baseline on Google Pixel 6.</p>
   </div>
 
 <article class="case-study">
   <div class="case-media logo-card">
     <div class="logo-title">Google Pixel</div>
-    <div class="logo-subtitle">Android Phone Validation · Completed · Build / Deploy / Touch Input</div>
+    <div class="logo-subtitle">Android Phone Validation · Completed · Build / Deploy / Touch Input / Profiling</div>
   </div>
   <div class="case-content">
     <div class="case-label">Personal Validation · Completed</div>
-    <h3>Google Pixel 6 Android Build, Deployment & Touch Input Validation</h3>
+    <h3>Google Pixel 6 Android Build, Deployment, Touch Input & Profiling Validation</h3>
     <p class="summary">The Android phone continuation of my Personal Android Validation track, and the workflow most directly aligned with Google Android / Play / Games preparation. On a borrowed Google Pixel 6, I validated the full Unreal Android phone build/deploy path with a UE 5.4 Vehicle Template, from packaging to on-device touch operation.</p>
     <div class="case-grid">
       <div>
@@ -364,11 +364,14 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding-top:18px;disp
           <li>Resolved desktop-to-mobile renderer differences: disabled/adjusted Lumen, Nanite, Virtual Shadow Maps and Path Tracing (unsupported on Mobile ES3.1).</li>
           <li>Investigated mobile SkyAtmosphere, sky material, ambient lighting and dark vehicle-reflection issues, reproducing them with Mobile Preview / standalone Mobile Renderer.</li>
           <li>Added an Android touch input UI for phone operation.</li>
+          <li>Established a repeatable Android system-tracing workflow using ADB, Perfetto and a reusable Windows batch script (record trace, pull to PC, open Perfetto UI).</li>
+          <li>Captured traces of the running app and reviewed GameThread / RenderThread / RHIThread and worker-thread scheduling, CPU core allocation, CPU frequency and SurfaceFlinger activity.</li>
+          <li>Used PerfettoSQL to inspect FrameTimeline data — confirming SurfaceFlinger display-frame data is present while application-level Expected/Actual timeline tracks are not, and mapping tool boundaries: Perfetto for Android OS/scheduler behavior, Unreal Insights for engine-level frame events, GPU tools for render-pass analysis.</li>
         </ul>
       </div>
       <div>
         <h4>Positioning</h4>
-        <p>This belongs to the same personal validation track as the Focus 3 standalone OpenXR baseline, extending it from standalone VR to Android phone development. Next planned step: runtime performance diagnostics with Perfetto on the same Pixel 6 baseline.</p>
+        <p>This belongs to the same personal validation track as the Focus 3 standalone OpenXR baseline, extending it from standalone VR to Android phone development and system-level profiling. It is framed as a profiling and diagnostics baseline — no optimization claims yet; the next planned step is a measured before/after optimization pass on the same Pixel 6 baseline.</p>
       </div>
     </div>
   </div>
