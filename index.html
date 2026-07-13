@@ -366,12 +366,12 @@ footer{border-top:1px solid var(--line);color:var(--muted);padding-top:18px;disp
           <li>Added an Android touch input UI for phone operation.</li>
           <li>Established a repeatable Android system-tracing workflow using ADB, Perfetto and a reusable Windows batch script (record trace, pull to PC, open Perfetto UI).</li>
           <li>Captured traces of the running app and reviewed GameThread / RenderThread / RHIThread and worker-thread scheduling, CPU core allocation, CPU frequency and SurfaceFlinger activity.</li>
-          <li>Used PerfettoSQL to inspect FrameTimeline data — confirming SurfaceFlinger display-frame data is present while application-level Expected/Actual timeline tracks are not, and mapping tool boundaries: Perfetto for Android OS/scheduler behavior, Unreal Insights for engine-level frame events, GPU tools for render-pass analysis.</li>
+          <li>Used PerfettoSQL to inspect FrameTimeline data. The trace contained SurfaceFlinger display frames, but no application-level Expected/Actual timeline tracks for the Unreal surface. This clarified which tool covers what: Perfetto for Android OS and scheduler behavior, Unreal Insights for engine-level frame events, and GPU tools for render-pass analysis.</li>
         </ul>
       </div>
       <div>
         <h4>Positioning</h4>
-        <p>This belongs to the same personal validation track as the Focus 3 standalone OpenXR baseline, extending it from standalone VR to Android phone development and system-level profiling. It is framed as a profiling and diagnostics baseline — no optimization claims yet; the next planned step is a measured before/after optimization pass on the same Pixel 6 baseline.</p>
+        <p>This belongs to the same personal validation track as the Focus 3 standalone OpenXR baseline, extended from standalone VR to Android phone development and system-level profiling. It is a profiling and diagnostics baseline with no optimization claims yet. The next step is a measured before/after optimization pass on the same Pixel 6 setup.</p>
       </div>
     </div>
   </div>
